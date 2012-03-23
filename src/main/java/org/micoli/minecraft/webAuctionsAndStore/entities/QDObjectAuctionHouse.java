@@ -7,7 +7,11 @@ import org.bukkit.entity.Player;
 import org.micoli.minecraft.webAuctionsAndStore.WebAuctionsAndStore;
 
 public class QDObjectAuctionHouse {
-	Block block;
+	static WebAuctionsAndStore plugin;
+	boolean debug = false;
+	private SimpleDateFormat hourFmt = new SimpleDateFormat("HH:mm:ss");
+	private Block block;
+
 	public Block getBlock() {
 		return block;
 	}
@@ -15,10 +19,6 @@ public class QDObjectAuctionHouse {
 	public void setBlock(Block block) {
 		this.block = block;
 	}
-
-	static WebAuctionsAndStore plugin;
-	boolean debug = false;
-	private SimpleDateFormat hourFmt = new SimpleDateFormat("HH:mm:ss");
 
 	public QDObjectAuctionHouse(Block b, Player player) {
 		block = b;
